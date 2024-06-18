@@ -9,8 +9,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animation = $AnimatedSprite2D
 @onready var anim_tree = $AnimationTree
 
-func _process(delta):
-	update_anim_state()
+#func _process(delta):
+	#update_anim_state()
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -32,10 +32,10 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-func update_anim_state():
-	if(velocity == Vector2.ZERO):
-		anim_tree["parameters/conditions/is_idle"] = true
-		anim_tree["parameters/conditions.is_moving"] = false
-	else:
-		anim_tree["parameters/conditions/isidle"] = false
-		anim_tree["parameters/conditions.is_moving"] = true
+#func update_anim_state():
+	#if(velocity == Vector2.ZERO):
+		#anim_tree["parameters/conditions/is_idle"] = true
+		#anim_tree["parameters/conditions.is_moving"] = false
+	#else:
+		#anim_tree["parameters/conditions/isidle"] = false
+		#anim_tree["parameters/conditions.is_moving"] = true
